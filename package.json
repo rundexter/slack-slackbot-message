@@ -1,12 +1,14 @@
 {
-    "name": "slack-slackbot-message",
-    "version": "0.0.1",
-    "description": "",
-    "main": "index.js",
-    "author": "Daniel Ilkovich",
-    "license": "ISC",
-    "private": true,
-    "dependencies": {
-        "lodash": "^3.9.3"
-    }
+  "name": "slack-slackbot-message",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Daniel Ilkovich",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "async": "^1.4.2",
+    "lodash": "^3.9.3",
+    "superagent": "^1.4.0"
+  }
 }

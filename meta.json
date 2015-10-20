@@ -1,26 +1,24 @@
-/*
- * Metadata describing the module operation
- */
 {
-    //Required. Inputs the module expects.
-    "inputs": [
-        //e.g.
-        /*
-        {
-            "id": "from",
-            "title":"From",
-        }
-        */
-    ],
-    //Required. Outputs the module emits.
-    "outputs": [
-      //e.g.
-      /*
-        {
-            "id": "from",
-            "title":"From",
-        }
-      */
-    ],
-    "title": "Slack Slackbot Message" /* Required.A display name for the module */
+    "inputs": [{
+        "id": "text",
+        "title":"Text",
+        "description": "The message to send"
+    }, {
+        "id": "channel",
+        "title": "Channel",
+        "description" : "The channel to send the message to"
+    }, {
+        "id": "team",
+        "title": "Team",
+        "description": "The slack team to use (as in http://<slack-team>.slack.com)",
+        "private" : true
+    }, {
+        "id": "token",
+        "title": "Token",
+        "description": "The slackbot token from slack. See: https://betaworks.slack.com/services/new/slackbot",
+        "private" : true
+    }],
+    "outputs": [ ],
+    "icon" : "slack",
+    "title": "Send a message as the slackbot"
 }
