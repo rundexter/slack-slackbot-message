@@ -25,6 +25,7 @@ module.exports = {
         async.mapSeries(channel
             //forEach channel execute this
             , function(channel, cb) {
+                self.log(channel);
                 if(channel) {
                     var url = 'https://'+team+'.slack.com/services/hooks/slackbot?token='+token+'&channel='+encodeURIComponent(channel);
                     self.log('POSTing '+url);
@@ -37,7 +38,6 @@ module.exports = {
             }
             //when all are complete execute this
             , function(err, results) {
-                results.forEach(function(result) { self.log('body '+JSON.stringify(result.body)); });
                 return err 
                     ? self.fail({ error: err, message: 'An error occurred processing an item.'})
                     : self.complete({});
