@@ -20,5 +20,5 @@
     }],
     "outputs": [ ],
     "icon" : "slack",
-    "title": "Send a message as the slackbot"
+    "title": "Slackbot Send Message"
 }
