@@ -1,5 +1,6 @@
 var request = require('superagent')
   , async   = require('async')
+  , querystring = require('querystring')
 ;
 
 module.exports = {
@@ -25,9 +26,8 @@ module.exports = {
         async.mapSeries(channel
             //forEach channel execute this
             , function(channel, cb) {
-                self.log(channel);
                 if(channel) {
-                    var url = 'https://'+team+'.slack.com/services/hooks/slackbot?token='+token+'&channel='+encodeURIComponent(channel);
+                    var url = 'https://'+team+'.slack.com/services/hooks/slackbot?'+querystring.stringify({token:token,channel:channel});
                     self.log('POSTing '+url);
                     request.post(url)
                         .send(message)
